@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_stores
+    columns: 
+      - name: store_number
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_liquor_vendors
+    columns:
+      - name: vendor_id
+        tests:
+          - unique
+          - not_null

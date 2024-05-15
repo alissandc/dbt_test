@@ -11,7 +11,7 @@ stores as (
 )
 
 SELECT 
-    src.invoice_and_item_number, 
+    DISTINCT src.invoice_and_item_number, 
     src.date as invoice_created_date,
 
     stores.store_number,
@@ -37,5 +37,5 @@ SELECT
     src.volume_sold_liters, 
     src.volume_sold_gallons
 from {{ source('iowa_liquor_store', 'sales') }} as src
-join item_liquors ON src.item_number = item_liquors.item_number
-join stores ON src.store_number = stores.store_number
+LEFT JOIN item_liquors ON src.item_number = item_liquors.item_number
+LEFT JOIN stores ON src.store_number = stores.store_number
