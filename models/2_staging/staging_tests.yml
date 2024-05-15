@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_stores
+    columns: 
+      - name: store_number
+        tests:
+          - not_null
+  - name: stg_location
+    columns:
+      - name: store_number
+        tests:
+          - not_null
+
