@@ -37,5 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   iowa_liquor_store:
-    store:
+    1_sources:
+      +materialized: view
+    2_staging:
+      +materialized: view
+    analytics:
       +materialized: view

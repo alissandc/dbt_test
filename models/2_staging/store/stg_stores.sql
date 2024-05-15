@@ -5,4 +5,4 @@ SELECT
   city,
   zip_code,
   county
-FROM `bigquery-public-data.iowa_liquor_sales.sales`
+from {{ source('iowa_liquor_store', 'sales') }}
