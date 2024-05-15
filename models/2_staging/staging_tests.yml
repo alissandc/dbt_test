@@ -6,11 +6,23 @@ models:
       - name: store_number
         tests:
           - unique
-          - not_null
-
+          - not null
   - name: stg_liquor_vendors
     columns:
       - name: vendor_id
         tests:
           - unique
-          - not_null
+          - not null
+  - name: stg_liqour_categories
+    columns:
+      - name: category_id
+        tests:
+          - unique
+          - not null
+  - name: stg_location
+    columns:
+      - name: store_number
+        tests:
+          - unique
+          - not null
+

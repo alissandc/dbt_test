@@ -6,3 +6,4 @@ SELECT
   zip_code,
   county
 from {{ source('iowa_liquor_store', 'sales') }}
+where store_number IS NOT NULL
